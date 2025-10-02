@@ -1,0 +1,59 @@
+# Docker & Database Configuration
+DB_ROOT_PASSWORD=root_secret_password
+DB_DATABASE=ci4_hexagonal_db
+DB_USERNAME=ci4_user
+DB_PASSWORD=ci4_password
+
+# CodeIgniter 4 Environment
+CI_ENVIRONMENT=development
+
+# Base URL (update this to your local URL)
+app.baseURL=http://localhost:8080/
+
+# Database Configuration (CI4 will use these)
+database.default.hostname=mysql
+database.default.database=ci4_hexagonal_db
+database.default.username=ci4_user
+database.default.password=ci4_password
+database.default.DBDriver=MySQLi
+database.default.DBPrefix=
+
+# Encryption Key (generate with: php spark key:generate)
+# Run this command after first setup
+encryption.key=
+
+# Session Configuration
+app.sessionDriver=CodeIgniter\Session\Handlers\FileHandler
+app.sessionCookieName=ci_session
+app.sessionExpiration=7200
+app.sessionSavePath=writable/session
+
+# CORS Settings (if building an API)
+CORS_ENABLED=true
+CORS_ALLOWED_ORIGINS=http://localhost:3000,http://localhost:8080
+
+# JWT Settings (if using JWT for API auth)
+JWT_SECRET=your-super-secret-jwt-key-change-this
+JWT_EXPIRATION=3600
+
+# Email Configuration (example with SMTP)
+email.protocol=smtp
+email.SMTPHost=smtp.gmail.com
+email.SMTPPort=587
+email.SMTPUser=your-email@gmail.com
+email.SMTPPass=your-app-password
+email.SMTPCrypto=tls
+email.fromEmail=noreply@yourdomain.com
+email.fromName=Your App Name
+
+# App Settings
+app.forceGlobalSecureRequests=false
+app.CSRFProtection=true
+app.CSRFTokenName=csrf_token
+app.CSRFHeaderName=X-CSRF-TOKEN
+app.CSRFCookieName=csrf_cookie
+app.CSRFExpire=7200
+app.CSRFRegenerate=true
+
+# Logging
+logger.threshold=4
